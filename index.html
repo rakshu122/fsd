@@ -1,0 +1,27 @@
+<html>
+<body>
+<script>
+function validateform(){
+var name=document.myfrom.name.value;
+var password=document.myfrom.password.value;
+if(name==null ||password=="")
+{
+ alert("Name can't be block");
+ return false;
+}
+else if(password.length<6)
+{
+ alert("password must be at least 6 characters long.");
+ return false;
+ }
+}
+</script>
+<body>
+<form name="myfrom"method="post"action="valid.html"onsubmit="return
+validateform()">
+Name:<input type="text"name="name"><br/>
+password:<input type="password"name="password"><br/>
+<input type="submit"value="register">
+</form>
+</body>
+</html>
